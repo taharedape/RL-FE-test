@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: #141414;
+    --secondary: #f5f5f5;
+    --danger: #ff204e;
+    --background: hsl(0 0% 100%);
+    --foreground: hsl(0 0% 3.9%);
+    --dark: #020617;
+    --light: #ffff;
+    --card: #ffffff;
+    --card-foreground: #0a0a0a;
+    --popover: #ffffff;
+    --popover-foreground: #0a0a0a;
+    --primary-foreground: #fafafa;
+    --secondary-foreground: #171717;
+    --muted: #f5f5f5;
+    --muted-foreground: #737373;
+    --accent: #f5f5f5;
+    --accent-foreground: #171717;
+    --destructive: #ef4444;
+    --destructive-foreground: #fafafa;
+    --border: #e5e5e5;
+    --input: #e5e5e5;
+    --ring: #0a0a0a;
+    --chart-1: #e76e50;
+    --chart-2: #2a9d90;
+    --chart-3: #274754;
+    --chart-4: #e8c468;
+    --chart-5: #f4a462;
+    --radius: 0.5rem;
+
+    /* style-guide colors */
+    --primary-color: #ffb82e;
+    --primary-color-normal: #ffc657;
+    --primary-color-light: #ffd380;
+    --secondary-color: #00261d;
+    --secondary-color-normal: #00382b;
+    --secondary-color-light: #004d3a;
+    --content-color-dark: #141414;
+    --content-color-normal: #4c4c4c;
+    --content-color-light: #a5a7a6;
+    --content-color-white: #fff;
+    --content-color-base: #563900;
+    --content-color-base-normal: #754d00;
+    --content-color-base-light: #946100;
+    --bg-color-100: #fafafa;
+    --bg-color-200: #fbf2e1;
+    --bg-color-300: #fbefd9;
+    --bg-color-400: #fbebcd;
+    --bg-color-500: #ededee;
+    --bg-color-600: #e4e5e6;
+    --bg-color-700: #dcddde;
+    --border-color-100: #dee0e0;
+    --border-color-200: #c4c6c6;
+    --border-color-300: #ffb82e;
+    --border-color-400: #faa500;
+    --state-color-red: #ff4758;
+    --state-color-green: #65d769;
+    --state-color-yellow: #ffe748;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+
+  * {
+    @apply border-border;
+    scrollbar-width: thin !important;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  *:not(.transform-letter-none):first-letter {
+    @apply !capitalize;
+    /* border: 1px solid red; */
+  }
+
+  .h1 {
+    @apply text-8xl font-black !capitalize;
+  }
+  .h2 {
+    @apply text-7xl font-black !capitalize;
+  }
+  .h3 {
+    @apply text-5xl font-extrabold !capitalize;
+  }
+  .h4 {
+    @apply text-4xl font-semibold;
+  }
+  .h5 {
+    @apply text-3xl font-semibold;
+  }
+  .bodyL {
+    @apply text-xl font-normal;
+  }
+  .bodyLB {
+    @apply text-xl font-bold;
+  }
+  .bodyS {
+    @apply text-base font-normal;
+  }
+  .bodySB {
+    @apply text-base font-bold;
+  }
+  .captionL {
+    @apply text-xs font-normal;
+  }
+  .captionS {
+    @apply text-[9px] font-normal;
+  }
+  .button {
+    @apply text-base font-medium leading-normal !capitalize;
+  }
+  .buttonL {
+    @apply text-xl font-medium leading-7 !capitalize;
+  }
+  .buttonS {
+    @apply text-xs font-medium leading-4 !capitalize;
+  }
+  .linkL {
+    @apply text-xl font-medium leading-7 underline !capitalize;
+  }
+  .linkS {
+    @apply text-base font-medium leading-normal underline !capitalize;
+  }
+
+  .wa-btn {
+    box-shadow: 0px 1px 3px 0px #0000001f, 0px 6px 6px 0px #0000001a,
+      0px 13px 8px 0px #0000000f, 0px 23px 9px 0px #00000005,
+      0px 36px 10px 0px #00000000;
+  }
+}
+
+@layer utilities {
+  body {
+    @apply text-primary bg-[#FAFAFA];
+    font-family: "Poppins", sans-serif;
+  }
+
+  .toast-top-left {
+    @apply fixed top-2 left-2 z-[100] md:max-w-[420px];
+  }
+
+  .nav-link {
+    @apply flex items-center gap-1 text-sm p-2 rounded-xl cursor-pointer bodyS;
+  }
+
+  .nav-active {
+    @apply !bg-neutral-300 bodySB;
+  }
+
+  button > div {
+    @apply w-max;
+  }
+}
+
+.r {
+  border: 1px solid red !important;
+}
